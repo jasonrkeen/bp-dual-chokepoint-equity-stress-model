@@ -1,0 +1,7 @@
+scenario,short_label,narrative,hormuz_disruption,bab_disruption,russian_product_loss_mbd,policy_offset_mbd,demand_response_mbd,duration_days,bp_volume_loss,refinery_availability,demand_destruction,market_return,risk_premium,ttf_exogenous_shock,fx_return,oil_sentiment
+Diplomatic De-escalation,De-escalation,"Shipping normalizes gradually and the embedded geopolitical premium recedes.",0.10,0.10,0.10,1.50,0.50,30,0.01,0.98,0.02,0.03,0.00,0.05,0.01,-0.08
+Extended Hormuz Constraint,Hormuz Constraint,"Hormuz remains impaired while Red Sea routes are intermittently available.",0.55,0.20,0.50,1.50,1.00,90,0.03,0.96,0.04,-0.02,0.05,0.35,-0.02,0.00
+Dual-Chokepoint Crisis,Dual Crisis,"Hormuz and Bab al-Mandeb are simultaneously impaired, raising physical and logistics losses.",0.65,0.60,0.70,1.80,1.30,120,0.05,0.93,0.07,-0.06,0.11,0.55,-0.04,0.02
+Product and LNG Squeeze,Product/LNG,"Moderate crude disruption combines with severe refined-product and LNG tightness.",0.35,0.45,1.30,1.00,0.70,90,0.02,0.97,0.03,0.00,0.04,0.45,-0.01,0.01
+Demand Destruction Threshold,Demand Threshold,"A long shock produces recession, material volume losses and valuation-multiple compression.",0.45,0.40,0.80,1.80,3.80,180,0.08,0.88,0.18,-0.18,0.18,0.15,-0.08,-0.03
+

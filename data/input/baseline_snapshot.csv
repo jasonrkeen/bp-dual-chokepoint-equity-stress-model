@@ -1,0 +1,11 @@
+as_of,metric,value,unit,status,source_id
+2026-07-27,BP NYSE ADR,42.86,USD/share,observed,market_bp
+2026-07-27,Brent front-month,90.93,USD/bbl,observed,reuters_20260727
+2026-04-24,TTF reference,12.00,USD/MMBtu,modeled_reference,eia_lng_20260428
+2026-07-27,Composite crack spread,20.00,USD/bbl,modeled_reference,assumption
+2025-12-31,Underlying RC profit,7.50,USD bn,reported,bp_fy2025
+2025-12-31,Operating cash flow,24.50,USD bn,reported,bp_fy2025
+2026-03-31,Net debt,25.30,USD bn,reported,bp_q12026
+2026-03-31,Upstream production,2.344,mmboe/d,reported,bp_q12026
+2026-03-31,Refining throughput,1.50,mmbbl/d,reported,bp_q12026
+

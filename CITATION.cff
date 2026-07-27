@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: BP Dual-Chokepoint Energy Shock Equity Stress Model
+message: If you use this research model, please cite it using this metadata.
+type: software
+authors:
+  - family-names: Keen
+    given-names: Jason
+version: 1.0.1
+date-released: 2026-07-27
+license: MIT
+abstract: >-
+  A transparent four-layer scenario model linking Hormuz and Bab al-Mandeb
+  disruption to energy markets, BP corporate earnings, cash flow, net debt,
+  and conditional ADR valuation distributions.

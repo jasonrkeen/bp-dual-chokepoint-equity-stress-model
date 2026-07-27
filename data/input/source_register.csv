@@ -1,0 +1,12 @@
+source_id,source,publication_date,access_date,data_used,model_role,url
+bp_fy2025,BP 4Q and FY 2025 results,2026-02-10,2026-07-27,"$7.5bn underlying RC profit; $24.5bn operating cash flow; $22.2bn year-end net debt",Corporate baseline,https://www.bp.com/press-and-publications/press-releases/fourth-quarter-2025-results
+bp_q12026,BP Q1 2026 results,2026-04-28,2026-07-27,"$25.3bn net debt; 2.344mmboe/d upstream production; refining throughput over 1.5mmb/d",Corporate baseline,https://www.bp.com/press-and-publications/press-releases/first-quarter-2026-results
+bp_annual2025,BP Annual Report and Form 20-F 2025,2026-03-06,2026-07-27,Segment definitions and risk disclosures,Model structure,https://www.bp.com/investors/results-reporting-and-presentations/annual-report
+eia_hormuz_20250616,U.S. EIA Hormuz chokepoint analysis,2025-06-16,2026-07-27,"20mmb/d oil flow; 2.6mmb/d available bypass; about one-fifth of LNG trade",Physical supply layer,https://www.eia.gov/todayinenergy/detail.php?id=65504
+eia_lng_20260428,U.S. EIA international LNG analysis,2026-04-28,2026-07-27,"Over 10Bcf/d disrupted; TTF and JKM response",Gas/LNG market layer,https://www.eia.gov/todayinenergy/detail.php?id=67604
+eia_redsea_20240201,U.S. EIA Red Sea shipping analysis,2024-02-01,2026-07-27,"Bab al-Mandeb represented 12% of seaborne oil trade in 1H23; BP paused Red Sea transits",Logistics layer,https://www.eia.gov/todayinenergy/detail.php?id=61363
+reuters_20260727,Reuters oil-market update,2026-07-27,2026-07-27,"Brent $90.93/bbl; Hormuz traffic remained low despite a pause in fighting",Market baseline and event context,https://www.reuters.com/business/energy/oil-slips-more-than-5-after-us-pauses-strikes-iran-2026-07-26/
+fred_brent,FRED DCOILBRENTEU,2026-07-22,2026-07-27,Optional live Brent observation,Live market refresh,https://fred.stlouisfed.org/series/DCOILBRENTEU
+market_bp,NYSE BP ADR market observation,2026-07-27,2026-07-27,$42.86 per ADR,Equity baseline,https://finance.yahoo.com/quote/BP/
+assumption,Transparent research assumption,2026-07-27,2026-07-27,"Elasticities; capture rates; uncertainty bands; valuation weights",Scenario model,methodology.md
+

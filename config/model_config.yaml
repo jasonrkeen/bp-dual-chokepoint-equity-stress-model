@@ -1,0 +1,72 @@
+project:
+  title: BP Dual-Chokepoint Energy Shock Equity Stress Model
+  author: Jason Keen
+  model_version: 1.0.1
+  baseline_date: "2026-07-27"
+  currency: USD
+  valuation_security: BP plc NYSE ADR
+
+simulation:
+  draws: 10000
+  seed: 20260727
+
+market:
+  bp_adr_price: 42.86
+  brent_usd_bbl: 90.93
+  ttf_usd_mmbtu: 12.00
+  composite_crack_usd_bbl: 20.00
+  global_liquids_demand_mbd: 103.0
+  base_freight_index: 100.0
+
+physical:
+  hormuz_oil_flow_mbd: 20.0
+  hormuz_lng_flow_bcfd: 10.0
+  bab_oil_flow_mbd: 8.8
+  bab_reroutable_share: 0.72
+  available_bypass_mbd: 2.6
+  bypass_utilization: 0.80
+
+company:
+  underlying_rc_profit_bn: 7.5
+  operating_cash_flow_bn: 24.5
+  cash_capex_bn: 14.5
+  net_debt_bn: 25.3
+  upstream_production_mmboed: 2.344
+  liquids_share: 0.55
+  refining_throughput_mbd: 1.50
+
+market_model:
+  oil_gap_linear: 5.0
+  oil_gap_convex: 18.0
+  demand_price_drag: 1.20
+  ttf_lng_elasticity: 1.50
+  crack_product_elasticity: 2.20
+  crack_logistics_elasticity: 0.40
+  crack_demand_drag: 0.90
+
+corporate_model:
+  upstream_after_tax_capture: 0.42
+  gas_earnings_base_bn: 2.5
+  gas_price_capture: 0.45
+  refining_after_tax_capture: 0.42
+  trading_opportunity_cap_bn: 1.50
+  customer_demand_exposure_bn: 3.0
+  volume_profit_pool_bn: 6.0
+  freight_cost_per_index_bn: 0.012
+  security_cost_per_day_bn: 0.0018
+  working_capital_per_brent_dollar_bn: 0.055
+
+valuation:
+  earnings_weight: 0.35
+  fcf_weight: 0.35
+  market_weight: 0.30
+  oil_beta: 0.35
+  market_beta: 0.90
+  gas_beta: 0.08
+  refining_beta: 0.06
+  fx_pass_through: 0.25
+  earnings_scaling_exponent: 0.72
+  fcf_scaling_exponent: 0.62
+  risk_premium_multiplier: 1.15
+  debt_penalty: 0.08
+  model_error_sigma: 0.12

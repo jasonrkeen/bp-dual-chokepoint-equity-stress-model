@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.pytest_cache/
+.DS_Store
+outputs/tmp/
+
+
+# Large or duplicate generated artifacts
+outputs/tables/monte_carlo_samples.csv
+outputs/pdf/*_Pinned_*.pdf
+outputs/pdf/*_Live_*.pdf
+outputs/archive/

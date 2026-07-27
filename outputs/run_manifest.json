@@ -1,0 +1,48 @@
+{
+  "project": {
+    "title": "BP Dual-Chokepoint Energy Shock Equity Stress Model",
+    "author": "Jason Keen",
+    "model_version": "1.0.1",
+    "baseline_date": "2026-07-27",
+    "currency": "USD",
+    "valuation_security": "BP plc NYSE ADR"
+  },
+  "run_at_utc": "2026-07-27T17:06:56+00:00",
+  "market_baseline": {
+    "bp_adr_price": 42.86,
+    "brent_usd_bbl": 90.93,
+    "ttf_usd_mmbtu": 12.0,
+    "composite_crack_usd_bbl": 20.0,
+    "observed_at": "2026-07-27",
+    "status": "pinned",
+    "notes": "Reproducible July 27, 2026 baseline."
+  },
+  "simulation": {
+    "draws_per_scenario": 10000,
+    "seed": 20260727
+  },
+  "scenario_count": 5,
+  "output_files": [
+    "outputs\\charts\\dual_chokepoint_threshold_map.png",
+    "outputs\\charts\\dual_crisis_earnings_waterfall.png",
+    "outputs\\charts\\dual_crisis_sensitivity.png",
+    "outputs\\charts\\probability_above_baseline.png",
+    "outputs\\charts\\scenario_distributions.png",
+    "outputs\\charts\\scenario_valuation_ranges.png",
+    "outputs\\executive_summary.md",
+    "outputs\\pdf\\BP_Dual_Chokepoint_Equity_Stress_Report.pdf",
+    "outputs\\pdf\\BP_Dual_Chokepoint_Equity_Stress_Report_Live_2026-07-27.pdf",
+    "outputs\\pdf\\BP_Dual_Chokepoint_Equity_Stress_Report_Pinned_2026-07-27.pdf",
+    "outputs\\run_manifest.json",
+    "outputs\\tables\\assumption_register.csv",
+    "outputs\\tables\\deterministic_scenario_details.csv",
+    "outputs\\tables\\monte_carlo_samples.csv",
+    "outputs\\tables\\scenario_summary.csv"
+  ],
+  "validation": {
+    "all_p10_le_median": true,
+    "all_median_le_p90": true,
+    "probabilities_in_unit_interval": true,
+    "finite_outputs": true
+  }
+}
