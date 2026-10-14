@@ -1,0 +1,56 @@
+{
+  "experiment_version": "0.2",
+  "production_commit": "df298da3b38ab68e862f66d25986d2b2a3cfe808",
+  "status": "PASS",
+  "draws_compared": 50000,
+  "production_arrays_compared": 40,
+  "max_direct_vs_trace_diff": 0.0,
+  "max_published_summary_diff": 7.105427357601002e-15,
+  "numeric_atol": 1e-12,
+  "seed_rule": "base_seed + 101 * one_based_index",
+  "coefficients": {
+    "xle_intercept": -0.00028,
+    "xle_market": 0.941,
+    "xle_brent": 0.214,
+    "bp_xle": 0.9,
+    "incremental_brent": 0.08
+  },
+  "coefficient_status": "Inherited experimental assumptions; calibration not re-estimated here.",
+  "source_hashes": {
+    "src/bp_stress_model/model.py": {
+      "git_blob": "da2816d3411a76cd43a68d32afca52de6b8ee4ae",
+      "sha256": "2f140ec6f168ed9652cf080ed1e7c9957a6fd4d20c181101787c8d2b3250c0a6"
+    },
+    "src/bp_stress_model/market_data.py": {
+      "git_blob": "2e6226f2d9f66bbdc551d14706f2bbf3a5bc3bb3",
+      "sha256": "33bad76a500b2c5bddd84f79e737a5e2082f6520ed99a80b33b4c0763e3fc94e"
+    },
+    "config/model_config.yaml": {
+      "git_blob": "3e76aba1faebfbfae4ddba67840803e19070f69b",
+      "sha256": "9d7b239651af5699eb5c736ac0a4391c30d176ba26eb358956bc1014439371b6"
+    },
+    "data/input/scenarios.csv": {
+      "git_blob": "e6a92f84bed8a12c2e475cbe24758cbdadab474c",
+      "sha256": "8d9c3f5148102498c09f89135406249a805326dbd31a53012d69a20295ddc452"
+    },
+    "outputs/tables/scenario_summary.csv": {
+      "git_blob": "128f630b8f9909d059bcc8c9248a1c4543c0eefa",
+      "sha256": "6996e99249997b5d4cc0f5644f9d31efb35c9dd2ec48a66537fdcffe49999104"
+    }
+  },
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "PyYAML": "6.0.3"
+    }
+  },
+  "output_sha256": {
+    "paired_results.csv": "c2ef9c66b04baf3d8ae2d54821a6e2817de5ae085d1a2e196c92666396018307",
+    "production_parity.csv": "a489aa403cbe0f3a1b015bb962bd66bef639d317fe4275aa1fca3dffc4fe5ab2",
+    "draw_hashes.csv": "b273739cfbb169065f6ea5183bc3fce1692c4d94748550b26cc6f124538e2135"
+  },
+  "review_scope": "Computational parity and same-environment repeatability, not independent scientific validation."
+}
