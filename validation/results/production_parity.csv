@@ -1,0 +1,6 @@
+scenario,scenario_index,seed,draws,direct_vs_trace_max_abs_diff,published_summary_max_abs_diff,status
+Diplomatic De-escalation,1,20260828,10000,0.0,0.0,PASS
+Extended Hormuz Constraint,2,20260929,10000,0.0,0.0,PASS
+Dual-Chokepoint Crisis,3,20261030,10000,0.0,0.0,PASS
+Product and LNG Squeeze,4,20261131,10000,0.0,0.0,PASS
+Demand Destruction Threshold,5,20261232,10000,0.0,7.105427357601002e-15,PASS

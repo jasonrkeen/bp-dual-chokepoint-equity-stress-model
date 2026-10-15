@@ -1,0 +1,55 @@
+name: validation-parity
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  challenger-parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13.5"
+          cache: pip
+          cache-dependency-path: validation/requirements-lock.txt
+      - run: python -m pip install -r validation/requirements-lock.txt
+      - name: Production and challenger parity
+        run: python validation/run_challengers.py --root . --out validation/ci_results
+      - name: Focused validation tests
+        run: python -m unittest discover -s validation -p test_parity.py -v
+      - name: Compare all stored paired summary fields
+        run: |
+          python - <<'PY'
+          import csv, math
+          from pathlib import Path
+          def load(path):
+              with Path(path).open(newline='', encoding='utf-8') as handle:
+                  return {(r['scenario'], r['architecture']): r for r in csv.DictReader(handle)}
+          expected = load('validation/results/paired_results.csv')
+          actual = load('validation/ci_results/paired_results.csv')
+          assert expected.keys() == actual.keys()
+          assert len(expected) == 15
+          maximum = 0.0
+          for key in expected:
+              assert expected[key].keys() == actual[key].keys()
+              for field, value in expected[key].items():
+                  observed = actual[key][field]
+                  if field in ('scenario', 'architecture') or value == '':
+                      assert value == observed, (key, field)
+                  else:
+                      difference = abs(float(value) - float(observed))
+                      assert math.isfinite(difference)
+                      maximum = max(maximum, difference)
+                      assert difference <= 1e-12, (key, field, value, observed)
+          print(f'PASS: all 15 paired rows match within 1e-12; maximum numeric difference={maximum:.17g}')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: challenger-parity-results
+          path: validation/ci_results/
+          if-no-files-found: error
